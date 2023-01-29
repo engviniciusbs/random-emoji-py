@@ -4,10 +4,10 @@ import random
 
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 
-port = int(os.environ.get("PORT", 5000))
-app.run(host='0.0.0.0', port=port)
+# port = int(os.environ.get("PORT", 5000))
+# app.run(host='0.0.0.0', port=port)
 
-@app.route('/')
+@app.route('/index')
 def index():
     images = os.listdir('static/images')
     random_image = random.choice(images)
