@@ -1,0 +1,20 @@
+body {
+    background-color: #333;
+    color: #fff;
+}
+
+p {
+    color: #fff;
+}
+
+a {
+    color: #fffb00;
+}
+
+a:hover {
+    color: #fff;
+}
+
+footer {
+    background: rgb(39 39 39);
+}

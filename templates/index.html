@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Random Emoji</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link id="theme-link" rel="stylesheet" type="text/css" href="../static/css/light-theme.css">
+    <link id="theme-link" rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="toggle-button">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="label">
+                    <i class="fas fa-moon"></i>
+                    <i class='fas fa-sun'></i>
+                    <div class='ball'></div>
+                </label>
+            </div>
+        </header>
+        <section>
+            <div class="container-image">
+                <img id="image" width="600" height="400" src="{{url_for('image', filename=image)}}" alt="Random image">
+            </div>
+            <div class="container-button">
+                <button id="refresh-button">Refresh Emoji</button>
+            </div>
+        </section>
+        <footer>
+            <p><strong>Developed</strong> by <a href="https://www.linkedin.com/in/viniciusbsarmento" target="_blank">Vinícius Sarmento</a>. The source code is on my<a href="https://github.com/engviniciusbs" target="_blank"> Github</a></p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>
